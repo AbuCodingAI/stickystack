@@ -1,0 +1,20 @@
+[package]
+name = "stickystack"
+version = "0.1.0"
+edition = "2021"
+description = "Turns the files on your Desktop into glossy fridge magnets, with curled sticky notes and date reminders"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/AbuCodingAI/stickystack"
+
+[dependencies]
+gtk = "0.18"
+gdk = "0.18"
+glib = "0.18"
+cairo-rs = "0.18"
+pango = "0.18"
+pangocairo = "0.18"
+notify = "6"
+
+[profile.release]
+opt-level = 2
+lto = true

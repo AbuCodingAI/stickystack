@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=StickyStack
+Comment=Desktop files as fridge magnets, plus sticky notes with reminders
+Exec=stickystack
+Icon=appointment-soon
+Categories=Utility;
+Terminal=false
