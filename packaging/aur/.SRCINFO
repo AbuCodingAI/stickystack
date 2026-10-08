@@ -1,0 +1,18 @@
+pkgbase = stickystack
+	pkgdesc = Turns the files on your Desktop into glossy fridge magnets, with curled sticky notes and date reminders
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/AbuCodingAI/stickystack
+	arch = x86_64
+	license = GPL-3.0-or-later
+	makedepends = cargo
+	depends = gtk3
+	depends = glib2
+	depends = cairo
+	depends = pango
+	depends = gdk-pixbuf2
+	depends = libnotify
+	source = stickystack-0.1.0.tar.gz::https://github.com/AbuCodingAI/stickystack/archive/refs/tags/v0.1.0.tar.gz
+	sha256sums = a76e74f7e56c85ce69a521c23e3f36020f6a03579c3e4022732ca40a9409a37d
+
+pkgname = stickystack

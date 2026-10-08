@@ -1,0 +1,33 @@
+# Maintainer: Abu <abu.shariffaiml@gmail.com>
+pkgname=stickystack
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Turns the files on your Desktop into glossy fridge magnets, with curled sticky notes and date reminders"
+arch=('x86_64')
+url="https://github.com/AbuCodingAI/stickystack"
+license=('GPL-3.0-or-later')
+depends=('gtk3' 'glib2' 'cairo' 'pango' 'gdk-pixbuf2' 'libnotify')
+makedepends=('cargo')
+source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('a76e74f7e56c85ce69a521c23e3f36020f6a03579c3e4022732ca40a9409a37d')
+
+prepare() {
+  cd "$pkgname-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+}
+
+build() {
+  cd "$pkgname-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  export CARGO_TARGET_DIR=target
+  cargo build --frozen --release
+}
+
+package() {
+  cd "$pkgname-$pkgver"
+  install -Dm755 "target/release/$pkgname" "$pkgdir/usr/bin/$pkgname"
+  install -Dm644 "$pkgname.desktop" "$pkgdir/usr/share/applications/$pkgname.desktop"
+  install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
