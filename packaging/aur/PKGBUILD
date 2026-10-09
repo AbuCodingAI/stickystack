@@ -1,6 +1,6 @@
 # Maintainer: Abu <abu.shariffaiml@gmail.com>
 pkgname=stickystack
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc="Turns the files on your Desktop into glossy fridge magnets, with curled sticky notes and date reminders"
 arch=('x86_64')
@@ -9,7 +9,7 @@ license=('GPL-3.0-or-later')
 depends=('gtk3' 'glib2' 'cairo' 'pango' 'gdk-pixbuf2' 'libnotify')
 makedepends=('cargo')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('a76e74f7e56c85ce69a521c23e3f36020f6a03579c3e4022732ca40a9409a37d')
+sha256sums=('303c3e67e1acd152e96af8a444906a50ab6a1c0dccb0786eff95614dc7a5fa98')
 
 prepare() {
   cd "$pkgname-$pkgver"
