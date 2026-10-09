@@ -1,6 +1,6 @@
 [package]
 name = "stickystack"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Turns the files on your Desktop into glossy fridge magnets, with curled sticky notes and date reminders"
 license = "GPL-3.0-or-later"
