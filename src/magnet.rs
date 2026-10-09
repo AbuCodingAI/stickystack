@@ -196,6 +196,7 @@ pub fn create(path: &Path, name: &str, slot: usize, positions: Rc<RefCell<Positi
         positions,
         draw: Box::new(move |cr, fx| draw(cr, fx, &icon)),
         on_open: Box::new(move || open(&p)),
+        hook: None,
         menu,
     })
 }

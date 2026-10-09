@@ -69,6 +69,7 @@ pub fn create(positions: Rc<RefCell<Positions>>) -> gtk::Window {
         positions,
         draw: Box::new(draw),
         on_open: Box::new(|| crate::editor::open(None)),
+        hook: None,
         menu: gtk::Menu::new(),
     })
 }
